@@ -2,6 +2,13 @@
 
 const { makeUser } = require('./user');
 
-const newUserData = {};
+const newUserData = {
+  username: 'Marco',
+  password: 'Polo',
+};
 
-console.log('new user:', makeUser(newUserData));
+const newUser = makeUser(newUserData);
+
+console.log('new user:', newUser);
+newUser.username = 'setFromOutside!';
+console.log(newUser);

@@ -1,11 +1,16 @@
-// id
-// username
-// password
-// dateCreated
-// dateModified
+function makeHash(toHash) {
+  // mock password hashing algo
+  return '#####' + toHash;
+}
 
 function makeUser({ id, username, password, dateCreated, dateModified } = {}) {
-  return 'hello world';
+  return Object.freeze({
+    id,
+    username,
+    password: makeHash(password),
+    dateCreated,
+    dateModified,
+  });
 }
 
 module.exports = {
