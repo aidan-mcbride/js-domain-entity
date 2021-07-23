@@ -10,5 +10,3 @@ const newUserData = {
 const newUser = makeUser(newUserData);
 
 console.log('new user:', newUser);
-newUser.username = 'setFromOutside!';
-console.log(newUser);
